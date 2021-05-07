@@ -1,4 +1,4 @@
--- @begin
+-- @start
 -- @title Base64 Encode
 -- @desc Base 64 encode and decode
 -- @author heramerom
