@@ -19,8 +19,8 @@ return {
     },
     {
         name = 'Hex Encode And Decode',
-        language = 'js'
+        language = 'js',
         intro = '/src/js/Hex/hex.html',
-        source = '/src/js/Hex/hex.js'
-    }
+        source = '/src/js/Hex/hex.js',
+    },
 }
