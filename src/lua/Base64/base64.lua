@@ -1,14 +1,15 @@
 -- @start
--- @title Base64 Encode
--- @desc Base 64 encode and decode
--- @author heramerom
--- @homepage 
--- @type action
--- @menu Copy With Base64 Encode
--- @menu Copy With Base64 Decode
--- @menu Replace With Base64 Encode
--- @menu Replace With Base64 Decode
--- @require https://raw.githubusercontent.com/toastdriven/lua-base64/master/base64.lua
+-- @namespace   com.github.mounthuaguo.mongkeyking
+-- @version     0.1
+-- @name        Base64 Encode
+-- @description Base 64 encode and decode
+-- @author      heramerom
+-- @type        action
+-- @action      Copy With Base64 Encode
+-- @action      Copy With Base64 Decode
+-- @action      Replace With Base64 Encode
+-- @action      Replace With Base64 Decode
+-- @require     https://raw.githubusercontent.com/toastdriven/lua-base64/master/base64.lua
 -- @end
 
 
