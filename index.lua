@@ -23,4 +23,10 @@ return {
         intro = '/src/js/Hex/hex.html',
         source = '/src/js/Hex/hex.js',
     },
+    {
+        name = 'Random',
+        language = 'lua',
+        intro = '/src/lua/Random/intro.html',
+        source = '/src/lua/Random/random.lua',
+    },
 }
