@@ -23,9 +23,9 @@ local rand = luajava.newInstance('java.util.Random', date:getTime())
 
 function gen(str, length)
     local ret = ''
-    local bounds = string.len(str) + 1
+    local bounds = string.len(str)
     for i = 1,length do 
-        local offset = rand:nextInt(bounds)
+        local offset = rand:nextInt(bounds) + 1
         ret = ret .. string.sub(str, offset, offset)
     end
     return ret
