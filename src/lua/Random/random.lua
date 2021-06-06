@@ -40,7 +40,7 @@ function inputLength()
 end
 
 function insert(str)
-    event.document.replace(event.selection.start, event.selection['end'], str)
+    event.document.insertString(event.selectionModel.selectionStart, str)
 end
 
 local menus = {
