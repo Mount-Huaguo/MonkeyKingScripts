@@ -5,15 +5,31 @@
 -- @description     Bson Object ID method suit
 -- @author          Heramerom
 -- @type            action
--- @menu            Copy Datetime From Bson ID
--- @menu.hide       Generate Object ID
+-- @action          Generate ObjectID
+-- @action          Show ObjectID datetime
 -- @end
 
-if action.menu == 'Copy Datetime From Bson ID' then
-    -- TODO
+local Integer = luajava.bindClass('java.lang.Integer')
+
+if menu == 'Generate ObjectID' then
+    local date = luajava.newInstance('java.util.Date')
+    local timestamp = date:getTime()
+    local id = Integer:toString(timestamp/1000, 16) .. '0000000000000000'
+    event.document.insertString(event.selectionModel.selectionStart, id)
 end
 
-
-if action.menu == 'Generate Object ID' then
-    -- TODO
+if menu == 'Show ObjectID datetime' then
+    local text = event.selectionModel.selectedText
+    if text == nil or input == '' then
+        toast.warn('Please select a bson objectId!')
+        return
+    end
+    if string.len(text) < 8 then
+        toast.warn('Object is too short!')
+        return
+    end
+    local timestamp = Integer:parseInt(string.sub(text, 1, 8), 16)
+    local date = luajava.newInstance('java.util.Date', timestamp * 1000)
+    local format = luajava.newInstance('java.text.SimpleDateFormat', 'yyyy-MM-dd hh:mm:ss.SSSZ')
+    toast.info(format:format(date))
 end

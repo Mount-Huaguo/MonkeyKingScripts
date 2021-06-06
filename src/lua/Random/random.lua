@@ -85,7 +85,6 @@ if menu == 'Insert Random Charactors' then
     end
     local str = ''
     for i, v in ipairs(r.data.Charactors) do
-        print(i, v)
         if v == 'Digital' then
             str = str .. digital
         end
