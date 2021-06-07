@@ -15,7 +15,7 @@
 -- @end
 
 function inputText() 
-    local text = event.selectionModel.selectionText
+    local text = event.selectionModel.selectedText
     if text == nil or text == '' then
         toast.warn('Please select text')
         return nil
@@ -29,7 +29,7 @@ if menu == 'Copy With Base64 Encode' then
     if not text then
         return
     end
-    clipboard.setContents(require.a.to_base64(text))
+    clipboard.setContents(to_base64(text))
     toast.info('Copied!')
 end
 
@@ -38,7 +38,7 @@ if menu == 'Copy With Base64 Decode' then
     if not text then
         return
     end
-    clipboard.setContents(require.a.from_base64(text))
+    clipboard.setContents(from_base64(text))
     toast.info('Copied!')
 end
 
@@ -50,7 +50,7 @@ if menu == 'Replace With Base64 Encode' then
     event.document.replaceString(
         action.selectionModel.selectionStart, 
         action.selectionModel.selectionEnd, 
-        require.a.to_base64(text))
+        to_base64(text))
 end
 
 if menu == 'Replace With Base64 Decode' then
@@ -61,7 +61,7 @@ if menu == 'Replace With Base64 Decode' then
     event.document.replaceString(
         action.selectionModel.selectionStart, 
         action.selectionModel.selectionEnd, 
-        require.a.grom_base64(text))
+        from_base64(text))
 end
 
 if menu == 'Output With Base64 Encode' then
@@ -69,7 +69,7 @@ if menu == 'Output With Base64 Encode' then
     if not text then
         return
     end
-    print(require.a.to_base64(text))
+    print(to_base64(text))
 end
 
 if menu == 'Output With Base64 Decode' then
@@ -77,6 +77,6 @@ if menu == 'Output With Base64 Decode' then
     if not text then
         return
     end
-    print(require.a.from_base64(text))
+    print(from_base64(text))
 end
 
