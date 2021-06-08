@@ -35,4 +35,10 @@ return {
         intro = '/src/js/AES/intro.html',
         source = '/src/ks/AES/aes.js',
     },
+    {
+        name = 'MD5',
+        language = 'js',
+        intro = '/src/js/MD5/intro.html',
+        source = '/src/ks/MD5/md5.js',
+    },
 }
