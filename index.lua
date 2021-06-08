@@ -29,4 +29,10 @@ return {
         intro = '/src/lua/Random/intro.html',
         source = '/src/lua/Random/random.lua',
     },
+    {
+        name = 'AES',
+        language = 'js',
+        intro = '/src/js/AES/intro.html',
+        source = '/src/ks/AES/aes.js',
+    },
 }
