@@ -44,7 +44,7 @@
     }
     var command = 'curl -X ' + r.method
     if (r.headers) {
-        command = command + '--header \'' + r.headers.join('\' --header \'') + '\''
+        command = command + ' --header \'' + r.headers.join('\' --header \'') + '\''
     }
     if (r.body) {
         command = command + ' -d \'' + r.body.trim('\n') + '\''
