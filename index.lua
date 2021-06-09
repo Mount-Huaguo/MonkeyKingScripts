@@ -47,4 +47,10 @@ return {
         intro = '/src/js/SHA/intro.html',
         source = '/src/js/SHA/sha.js',
     },
+    {
+        name = 'Request',
+        language = 'js',
+        intro = '/src/js/Request/intro.html',
+        source = '/src/js/Request/request.js',
+    },
 }
