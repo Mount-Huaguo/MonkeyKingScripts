@@ -41,4 +41,10 @@ return {
         intro = '/src/js/MD5/intro.html',
         source = '/src/js/MD5/md5.js',
     },
+    {
+        name = 'SHA',
+        language = 'js',
+        intro = '/src/js/SHA/intro.html',
+        source = '/src/js/SHA/sha.js',
+    },
 }
