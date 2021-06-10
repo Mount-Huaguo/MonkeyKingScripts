@@ -1,7 +1,7 @@
 -- 
 -- Script collection for Intellij IDEA Monkey King plugin.
 -- 
--- Hope share your own scripts
+-- Please submmit Push Request if you have a nice idea.
 -- 
 
 return {
@@ -24,33 +24,39 @@ return {
         source = '/src/js/Hex/hex.js',
     },
     {
-        name = 'Random',
+        name = 'Random Strings',
         language = 'lua',
         intro = '/src/lua/Random/intro.html',
         source = '/src/lua/Random/random.lua',
     },
     {
-        name = 'AES',
+        name = 'AES Encrypt',
         language = 'js',
         intro = '/src/js/AES/intro.html',
         source = '/src/js/AES/aes.js',
     },
     {
-        name = 'MD5',
+        name = 'MD5 Encode',
         language = 'js',
         intro = '/src/js/MD5/intro.html',
         source = '/src/js/MD5/md5.js',
     },
     {
-        name = 'SHA',
+        name = 'SHA Encode',
         language = 'js',
         intro = '/src/js/SHA/intro.html',
         source = '/src/js/SHA/sha.js',
     },
     {
-        name = 'Request',
+        name = 'Request Convert to cUrl',
         language = 'js',
         intro = '/src/js/Request/intro.html',
         source = '/src/js/Request/request.js',
+    },
+    {
+        name = 'Color Transform Between Hex and RGB',
+        language = 'lua',
+        intro = '/src/lua/ColorTransform/intro.html',
+        source = '/src/lua/ColorTransform/color.lua',
     },
 }
