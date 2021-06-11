@@ -65,4 +65,10 @@ return {
         intro = '/src/js/RSA/intro.html',
         source = '/src/js/RSA/rsa.js',
     },
+    {
+        name = 'Base64 Encode and Decode',
+        language = 'js',
+        intro = '/src/js/Base64/intro.html',
+        source = '/src/js/Base64/base64.js',
+    },
 }
