@@ -94,14 +94,12 @@
     }
 
     if (menu === 'RSA Encrypt') {
-        var pub = readFile(key.pub)
-        print(encrypt(pub, input))
+        print(encrypt(_publickKey, input))
         return
     }
 
     if (menu === 'RSA Decrypt') {
-        var pri = readFile(key.pri)
-        print(decrypt(pri, input))
+        print(decrypt(_privateKey, input))
         return
     }
 
