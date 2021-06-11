@@ -1,5 +1,5 @@
 -- @start
--- @namespace   com.github.mounthuaguo.mongkeyking
+-- @namespace   com.github.mounthuaguo.mongkeyking.lua
 -- @version     0.1
 -- @name        Base64 Encode
 -- @description Base64 encode and decode

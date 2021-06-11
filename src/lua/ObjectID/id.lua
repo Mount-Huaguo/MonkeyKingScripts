@@ -1,5 +1,5 @@
 -- @start
--- @namespace       com.github.mounthuaguo.monkeyking
+-- @namespace       com.github.mounthuaguo.monkeyking.lua
 -- @version         0.1
 -- @name            Bson Object ID
 -- @description     Bson Object ID method suit

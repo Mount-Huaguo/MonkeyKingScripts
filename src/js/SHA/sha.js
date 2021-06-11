@@ -1,5 +1,5 @@
 // @start
-// @namespace com.github.mounthuaguo.mongkeyking
+// @namespace com.github.mounthuaguo.mongkeyking.js
 // @version 0.1
 // @name SHA
 // @type action
