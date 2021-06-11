@@ -59,4 +59,10 @@ return {
         intro = '/src/lua/ColorTransform/intro.html',
         source = '/src/lua/ColorTransform/color.lua',
     },
+    {
+        name = 'RSA Encrypt Demo',
+        language = 'js',
+        intro = '/src/js/RSA/intro.html',
+        source = '/src/js/RSA/rsa.js',
+    },
 }

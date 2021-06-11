@@ -1,0 +1,42 @@
+<div style="padding: 16px;">
+    <div style="font-size: 1.1em;">
+        RSA Encrypt and Decrypt Demo
+    </div>
+    <br />
+    <div>
+        <ul>
+            <li>1. RSA Encrypt</li>
+            <li>2. RSA Decrypt</li>
+        </ul>
+    </div>
+    <br />
+    <div>
+        You must set the public key and private key before use this script.
+    </div>
+    <br />
+    <div>
+        使用前请先设置秘钥。
+    </div>
+    <br />
+    <div>
+        As we know, the encrypt text length must less than RSA key length. So, this script will split large text to
+        chuck, and append them together after encrypted.
+    </div>
+    <br />
+    <div>
+        因为RSA加密的文本长度不能超过秘钥的长度，比如一个长度是2048的秘钥，只能加密 2048/8-11
+        长度的字符串。其中11是Pending长度。所以这个脚本先把待加密的文本分组，然后加密，最后拼接到一起，输出Base64格式的加密文本。
+    </div>
+    <br />
+    <div>
+        The RSA encryption key has PKCS#1 format and PKCS#8 format, this script only support PKCS#8 format, if your
+        encryption key is PKCS#1 format, you must convert it to PKCS#8 format first.
+    </div>
+    <br />
+    <div>
+        RSA秘钥的格式分为PKCS#1和PKCS#8两种，这个脚本只支持PKCS#8格式的秘钥，如果你的秘钥是PKCS#1格式的，则需要先将秘钥转成PKCS#8。
+    </div>
+    <div>
+        如果不希望秘钥保存在脚本当中，可以使用readFile方法去加载秘钥
+    </div>
+</div>
