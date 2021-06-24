@@ -71,4 +71,10 @@ return {
         intro = '/src/js/Base64/intro.html',
         source = '/src/js/Base64/base64.js',
     },
+    {
+        name = 'Mysql And Go Struct Transform',
+        language = 'js',
+        intro = '/src/js/Mysql2GoStruct/intro.html',
+        source = '/src/js/Mysql2GoStruct/mysql2GoStruct.js',
+    },
 }
