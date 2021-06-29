@@ -213,14 +213,12 @@
         var tag = '`'
         if (conf.json) {
             tag = tag + 'json:"' + field.field + '" '
-        }
-        if (conf.jsonWithOmit) {
+        } else if (conf.jsonWithOmit) {
             tag = tag + 'json:"' + field.field + ',omitempty" '
         }
         if (conf.orm == 'gorm') {
             tag = tag + 'gorm:"column:' + field.field + '"'
-        }
-        if (conf.orm == 'sqlx') {
+        } else if (conf.orm == 'sqlx') {
             tag = tag + 'db:"' + field.field + '"'
         }
         tag = tag + '`'
