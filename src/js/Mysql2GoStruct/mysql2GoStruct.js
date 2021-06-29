@@ -8,6 +8,13 @@
 // @end 
 
 (function () {
+    
+    var conf = {
+        orm: 'gorm', // support gorm and sqlx
+        json: true, // auto generate json tag, this option is conflict with jsonWithOmit
+        jsonWithOmit: false, // auto generate json omitempty tag，this option is conflict with json
+        comment: true, // auto generate comment
+    }
 
     var stmt = event.selectionModel().selectedText()
     if (!stmt) {
@@ -61,7 +68,7 @@
             if (!parentheses) {
                 continue
             }
-            if (char == ',' && !quota) {
+            if (char == ',' && !quota && count == 1) {
                 lines.push(line)
                 line = ''
                 continue
@@ -185,6 +192,9 @@
     var fields = []
     for (var i in lines) {
         var line = lines[i]
+        if (/^\s*constraint\s+/ig.test(line)) {
+            continue
+        }
         var field = parseLine(line)
         fields.push(field)
     }
@@ -197,13 +207,34 @@
     var str = 'type ' + processField(tableName) + ' struct {' + '\n'
     for (var i in fields) {
         var field = fields[i]
-        if (field.comment) {
+        if (field.comment && conf.comment) {
             str = str + '\t// ' + field.comment + '\n'
         }
-        str = str + '\t' + processField(field.field) + '\t' + field.type + '\t' + '`gorm:"column:' + field.field + '"`' + '\n'
+        var tag = '`'
+        if (conf.json) {
+            tag = tag + 'json:"' + field.field + '" '
+        }
+        if (conf.jsonWithOmit) {
+            tag = tag + 'json:"' + field.field + ',omitempty" '
+        }
+        if (conf.orm == 'gorm') {
+            tag = tag + 'gorm:"column:' + field.field + '"'
+        }
+        if (conf.orm == 'sqlx') {
+            tag = tag + 'db:"' + field.field + '"'
+        }
+        tag = tag + '`'
+        str = str + '\t' + processField(field.field) + '\t' + field.type + '\t' + tag + '\n'
     }
 
     str = str + '}\n'
+
+    if (conf.orm == 'gorm') {
+        str = str + '\n'
+        str = str + 'func (' + processField(tableName) + ') TableName() string { \n' 
+        str = str + '\treturn "' + tableName + '"\n'
+        str = str + '}'
+    }
 
     event.document().replaceString(
         event.selectionModel().selectionStart(),
