@@ -1,4 +1,4 @@
-# MonkeyKingScripts [中文文档](/README_ZH.md)
+# MonkeyKingScripts [中文文档](/README_zh.md)
 
 > Scripts repository for Intellij IDEA [MonkeyKing](https://plugins.jetbrains.com/plugin/16949-monkeyking) plugin
 
