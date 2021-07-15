@@ -30,6 +30,6 @@ if menu == 'Show ObjectID datetime' then
     end
     local timestamp = Integer:parseInt(string.sub(text, 1, 8), 16)
     local date = luajava.newInstance('java.util.Date', timestamp * 1000)
-    local format = luajava.newInstance('java.text.SimpleDateFormat', 'yyyy-MM-dd hh:mm:ss.SSSZ')
+    local format = luajava.newInstance('java.text.SimpleDateFormat', 'yyyy-MM-dd HH:mm:ss.SSSZ')
     toast.info(format:format(date))
 end
