@@ -10,7 +10,7 @@ In Idea MonkeyKing configrue page. Click *Browser* tab, the list will show all s
 ![usage](/demo1.jpg)
 
 
-## 2. How to publich a script.
+## 2. How to publish a script.
 You must fork this repository, implement the script in your forked repository, and then submit a pr.
 
 ## 3. Specification
