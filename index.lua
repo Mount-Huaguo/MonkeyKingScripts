@@ -77,4 +77,10 @@ return {
         intro = '/src/js/Mysql2GoStruct/intro.html',
         source = '/src/js/Mysql2GoStruct/mysql2GoStruct.js',
     },
+    {
+        name = 'Quick Insert Time Zone Names',
+        language = 'js',
+        intro = '/src/js/TimeZone/intro.html',
+        source = '/src/js/TimeZone/zone.js',
+    },
 }
