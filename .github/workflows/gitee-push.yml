@@ -9,5 +9,5 @@ jobs:
        env:
          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
        with:
-         source-repo: "git@github.com:Mount-Huaguo/MonkeyKingScripts.git"
+         source-repo: "https://github.com/Mount-Huaguo/MonkeyKingScripts.git"
          destination-repo: git@gitee.com:dawenxi-tech/MonkeyKingScripts.git
