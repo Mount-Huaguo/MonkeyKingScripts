@@ -5,7 +5,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: Sync to Gitee
-       uses: wearerequired/git-mirror-action@master
+       uses: Mount-Huaguo/git-mirror-action@master
        env:
          SSH_PRIVATE_KEY: ${{ secrets.SR_HT_SSH_PRIVATE_KEY }}
        with:
